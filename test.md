@@ -1,4 +1,4 @@
-# Annual Budget Planning Process
+# New Feature Development
 
 ```mermaid
 flowchart TD
@@ -18,29 +18,44 @@ flowchart TD
     L --> M([End])
 ```
 
-## About the Flowchart
+# Bug Fixing Process
 
-This flowchart illustrates the comprehensive annual budget planning process, from initial timeline establishment to year-end analysis. The process includes:
+```mermaid
+flowchart TD
+    A([Start]) --> B[Receive Bug Report]
+    B --> C[Verify Bug]
+    C --> D{Reproducible?}
+    D -->|No| E[Request More Info]
+    E --> C
+    D -->|Yes| F[Assign Priority]
+    F --> G[Assign Developer]
+    G --> H[Develop Fix]
+    H --> I[QA Verification]
+    I --> J{Bug Fixed?}
+    J -->|No| G
+    J -->|Yes| K[Deploy Fix]
+    K --> L[Notify Client]
+    L --> M([End])
+```
+# Feature Implementation Process
 
-- Initial Planning & Analysis
-- Departmental Budget Reviews
-- Executive & Board Approvals
-- Implementation & Monitoring
-- Continuous Adjustment Procedures
-
-### Key Decision Points
-
-1. **Parameter Validation**: Ensures department requests align with targets
-2. **Executive Approval**: Senior management review and approval
-3. **Board Approval**: Final authorization of the budget
-4. **Adjustment Reviews**: Periodic assessment of budget performance
-
-### Parallel Processes
-
-- **Analysis Phase**: Revenue, Expense, and Profit Margin analysis
-- **Department Reviews**: Dev, Marketing, Sales, and Operations
-- **Projections**: Variance, ROI, and Cash Flow analysis
-- **Monitoring**: Monthly, Quarterly, and Variance reporting
-
----
-> **Note**: This flowchart uses Mermaid.js syntax. Ensure your Markdown viewer supports Mermaid diagrams.
+```mermaid
+flowchart TD
+    A([Start]) --> B[Feature Request]
+    B --> C[Feasibility Analysis]
+    C --> D{Viable?}
+    D -->|No| E[Reject Request]
+    E --> Z([End])
+    D -->|Yes| F[Estimation]
+    F --> G[Approval]
+    G --> H{Approved?}
+    H -->|No| I[Add to Backlog]
+    I --> Z
+    H -->|Yes| J[Development]
+    J --> K[QA Testing]
+    K --> L{Passes QA?}
+    L -->|No| J
+    L -->|Yes| M[Client Demo]
+    M --> N[Documentation]
+    N --> Z
+```
