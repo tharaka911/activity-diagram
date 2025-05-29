@@ -2,7 +2,6 @@
 
 ```mermaid
 flowchart TD
-   flowchart TD
     A([Start]) --> B[Receive Project Request]
     B --> C[Document Requirements]
     C --> D{Requirements Clear?}
